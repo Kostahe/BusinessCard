@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Business card</string>
+    <string name="telephone_number">+420 303 405 803</string>
+    <string name="email">huzilkon@gmail.com</string>
+    <string name="name">Konstantyn Huzil</string>
+    <string name="occupation">Python developer</string>
+    <string name="Description_Logo">Python logo</string>
 </resources>

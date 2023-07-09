@@ -23,6 +23,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -58,7 +59,7 @@ fun BusinessCardBody(name: String, occupation: String, modifier: Modifier = Modi
 
         Image(
             painter = painterResource(id = R.drawable.python_logo2),
-            contentDescription = "Python logo",
+            contentDescription = stringResource(R.string.Description_Logo),
             modifier = Modifier
                 .width(80.dp)
                 .height(80.dp)
@@ -67,7 +68,6 @@ fun BusinessCardBody(name: String, occupation: String, modifier: Modifier = Modi
             text = name,
             fontSize = 40.sp,
         )
-
         Text(
             text = occupation,
             color = Color(255, 207, 63),
@@ -101,13 +101,13 @@ fun CardReferences(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Bottom,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        CardReference(text = "+420 303 405 803", imageId = R.drawable.baseline_local_phone_black_24dp)
-        CardReference(text = "huzilkon@gmail.com", imageId = R.drawable.baseline_email_black_24dp)
+        CardReference(text = stringResource(R.string.telephone_number), imageId = R.drawable.baseline_local_phone_black_24dp)
+        CardReference(text = stringResource(R.string.email), imageId = R.drawable.baseline_email_black_24dp)
     }
 }
 @Composable
 fun BusinessCardApp(modifier: Modifier = Modifier) {
-    BusinessCardBody(name = "Konstantyn Huzil", occupation = "Python developer")
+    BusinessCardBody(name = stringResource(R.string.name), occupation = stringResource(R.string.occupation))
     CardReferences()
 }
 
